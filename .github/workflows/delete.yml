@@ -3,8 +3,8 @@ on:
   workflow_dispatch:
 jobs:
   delete:
-    name: Delete_Workflow
-    runs-on: Ubuntu-latest
+    name: Delete
+    runs-on: ubuntu-latest
     steps:
     - name: testing
       uses: appleboy/ssh-actions@master
