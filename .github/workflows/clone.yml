@@ -7,13 +7,13 @@ jobs:
     name: Clone Workflow
     runs-on: Ubuntu-latest
     steps:
-      name: testing
+    - name: testing
       uses: appleboy/ssh-actions@master
       with:
-        host: {{ secrets.HOST }}
-        username: {{ secrets.USERNAME }}
-        password: {{ secrets.PASSWORD }}
-        port: {{ secrets.PORT }}
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
         script: |
           cd /pub/amill164/
           git clone https://github.com/amiller164/cmsc389T-web-template.git
