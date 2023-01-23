@@ -1,11 +1,10 @@
 name: Clone Workflow
 on:
   workflow_dispatch:
- 
 jobs:
   clone:
-    name: Clone Workflow
-    runs-on: Ubuntu-latest
+    name: Clone
+    runs-on: ubuntu-latest
     steps:
     - name: testing
       uses: appleboy/ssh-actions@master
