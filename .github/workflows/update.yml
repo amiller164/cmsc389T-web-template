@@ -1,9 +1,10 @@
 name: Update Workflow
 on:
   push:
+    branches: [master]
 jobs:
   update:
-    name: Update
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
     - name: testing
@@ -14,5 +15,5 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          cd /pub/amill164/
+          cd /pub/amill164
           git pull
