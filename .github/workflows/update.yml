@@ -3,7 +3,7 @@ on:
   push:
 jobs:
   update:
-    name: Update_Workflow
+    name: Update
     runs-on: Ubuntu-latest
     steps:
     - name: testing
