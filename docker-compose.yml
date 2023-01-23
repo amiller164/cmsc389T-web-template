@@ -2,7 +2,12 @@ version: '3'
 
 services:
   nodejs:
-    #fill out the configuration here
+    build:
+      context: .
+      dockerfile: DockerFile
+      image: node:10-alpine
+      container_name: project4
+      restart: unless-stopppec
     networks:
       - app-network
   
@@ -28,7 +33,7 @@ volumes:
     driver_opts:
       type: none
       #fill out your absolute path to your folder here
-      device: /absolute/path/to/web/template/folder
+      device: /root/cmsc389T-web-template/
       o: bind
 
 networks:
